@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeuroFarming — AI plant health for Mediterranean growers</title>
+  <meta name="description"
+    content="Photograph a leaf or canopy, get plant-health guidance, and see regional outbreak risk — built for olive and citrus growers." />
+  <meta name="theme-color" content="#05100b" />
+  <meta property="og:title" content="NeuroFarming" />
+  <meta property="og:description" content="Field diagnosis for Mediterranean olive and citrus growers." />
+  <meta property="og:image" content="assets/logo.webp" />
+  <link rel="icon" href="assets/logo-icon.webp" type="image/webp" />
+  <link rel="preload" as="image" href="assets/hero-olive-sm.webp" type="image/webp" media="(max-width: 760px)"
+    fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/hero-olive.webp" type="image/webp" media="(min-width: 761px)"
+    fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/logo-wordmark-white.webp" type="image/webp" />
+  <link rel="preload" as="font" href="assets/fonts/bricolage-latin.woff2" type="font/woff2" crossorigin />
+  <link rel="preload" as="font" href="assets/fonts/figtree-latin.woff2" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #d5ded4;
+      color: #0f1b15;
+      font-family: "Figtree", "Segoe UI", sans-serif
+    }
+
+    .hero {
+      min-height: 100svh;
+      background: #05100b;
+      color: #f1f5ee
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header">
+    <a class="logo" href="#top" aria-label="NeuroFarming home">
+      <img src="assets/logo-wordmark-white.webp" alt="NeuroFarming" width="200" height="30" decoding="async" />
+    </a>
+    <nav id="nav" class="nav" aria-label="Primary">
+      <a href="#field">Field app</a>
+      <a href="#diagnose">Diagnosis</a>
+      <a href="#insights">Insights</a>
+      <a href="#admin">Admin</a>
+      <a href="#pilot">Pilot</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="#contact">Request access</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero" aria-labelledby="hero-brand">
+      <picture class="hero-bg" aria-hidden="true">
+        <source media="(max-width: 760px)" srcset="assets/hero-olive-sm.webp" type="image/webp" width="800"
+          height="450" />
+        <img src="assets/hero-olive.webp" alt="" width="1200" height="675" fetchpriority="high" decoding="async"
+          data-parallax />
+      </picture>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-content">
+        <img id="hero-brand" class="hero-logo" src="assets/logo-wordmark-white.webp" alt="NeuroFarming" width="480"
+          height="72" fetchpriority="high" decoding="async" />
+        <p class="hero-kicker">Mallorca · olive &amp; citrus</p>
+        <h1 class="hero-title">Know the tree before the <em>season</em> turns.</h1>
+        <p class="hero-lead">
+          Photograph a leaf or canopy in the grove. NeuroFarming returns plant-health guidance and regional outbreak
+          context for Mediterranean growers.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#contact">Request pilot access</a>
+          <a class="btn btn-line" href="#field">See the field flow</a>
+        </div>
+      </div>
+      <a class="hero-more" href="#field" aria-label="Scroll to field flow"><span>Explore</span></a>
+    </section>
+
+    <section id="field" class="flow" aria-label="Product flow">
+      <div class="flow-track">
+        <article class="flow-item reveal">
+          <span class="flow-n">01</span>
+          <h2>Capture</h2>
+          <p>Shoot in the grove with consent and GPS tips when location is available.</p>
+        </article>
+        <article class="flow-item reveal">
+          <span class="flow-n">02</span>
+          <h2>Diagnose</h2>
+          <p>Cloud BioCLIP-2 returns healthy, pest, disease, or stress — with confidence.</p>
+        </article>
+        <article class="flow-item reveal">
+          <span class="flow-n">03</span>
+          <h2>Act</h2>
+          <p>Use advisories, outbreak maps, and agronomist escalation when it matters.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Consortium partners">
+      <div class="trust-track">
+        <div class="trust-group">
+          <span>SMART ERA</span>
+          <span>Eight Bells</span>
+          <span>Horizon Europe</span>
+          <span>NeuroFarming</span>
+          <span>Mallorca Pilot</span>
+        </div>
+        <div class="trust-group" aria-hidden="true">
+          <span>SMART ERA</span>
+          <span>Eight Bells</span>
+          <span>Horizon Europe</span>
+          <span>NeuroFarming</span>
+          <span>Mallorca Pilot</span>
+        </div>
+      </div>
+    </section>
+
+    <nav class="chips" aria-label="Jump to product areas">
+      <a class="chip is-active" href="#field" data-chip="field">Field</a>
+      <a class="chip" href="#diagnose" data-chip="diagnose">Diagnosis</a>
+      <a class="chip" href="#insights" data-chip="insights">Insights</a>
+      <a class="chip" href="#admin" data-chip="admin">Admin</a>
+    </nav>
+
+    <section class="showcase reveal cv" aria-labelledby="showcase-title">
+      <div class="showcase-copy">
+        <p class="label">In the handset</p>
+        <h2 id="showcase-title">Built for the grove, not the office.</h2>
+        <p>
+          Offline-first capture queues the photo when signal drops, then syncs for higher-accuracy cloud diagnosis.
+          On-device TensorFlow Lite covers the first pass without a network.
+        </p>
+        <ul class="ticks">
+          <li>Works through patchy mobile coverage</li>
+          <li>Stores the photo until upload can finish</li>
+          <li>Keeps consent with every observation</li>
+        </ul>
+      </div>
+      <div class="showcase-phones" aria-hidden="false">
+        <figure class="phone phone-back">
+          <img src="assets/phone-home.webp" alt="NeuroFarming home screen" width="560" height="1164" loading="lazy"
+            decoding="async" />
+        </figure>
+        <figure class="phone phone-mid">
+          <img src="assets/phone-diagnosis.webp?v=3" alt="NeuroFarming cloud diagnosis screen" width="560" height="1141"
+            loading="lazy" decoding="async" />
+        </figure>
+        <figure class="phone phone-front">
+          <img src="assets/phone-capture.webp" alt="NeuroFarming capture screen showing olive leaves" width="560"
+            height="1129" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="diagnose" class="split split-dark reveal cv">
+      <figure class="split-media">
+        <div class="phone">
+          <img src="assets/phone-diagnosis.webp?v=3" alt="Cloud diagnosis result on NeuroFarming" width="560"
+            height="1141" loading="lazy" decoding="async" />
+        </div>
+      </figure>
+      <div class="split-copy">
+        <p class="label">Vision inference</p>
+        <h2>Cloud intelligence, agronomist-ready.</h2>
+        <p>
+          BioCLIP-2 returns a label, confidence score, and recommendation text. Low-confidence or false-healthy cases
+          can escalate for human review through continuous learning.
+        </p>
+        <p class="meta">Healthy · Pest · Disease · Stress</p>
+      </div>
+    </section>
+
+    <section class="mosaic reveal" aria-label="Mallorca orchard scenes">
+      <figure class="mosaic-cell">
+        <img src="assets/hero-olive.webp" alt="Olive canopy in soft Mediterranean light" width="1200" height="675"
+          loading="lazy" decoding="async" />
+      </figure>
+      <figure class="mosaic-cell">
+        <img src="assets/citrus-strip.webp" alt="Citrus fruit on the branch" width="1100" height="618" loading="lazy"
+          decoding="async" />
+      </figure>
+      <figure class="mosaic-cell">
+        <img src="assets/grove-terrace.webp" alt="Terraced grove in the Sóller valley" width="1100" height="619"
+          loading="lazy" decoding="async" />
+      </figure>
+      <figure class="mosaic-cell">
+        <img src="assets/contact-grove.webp" alt="Olive grove rows at dusk" width="1200" height="560" loading="lazy"
+          decoding="async" />
+      </figure>
+    </section>
+
+    <section id="insights" class="split reveal cv">
+      <div class="split-copy">
+        <p class="label">Cooperative insights</p>
+        <h2>See risk beyond a single tree.</h2>
+        <p>
+          Outbreak alerts, weather-driven task advisories, and Mallorca-centred hotspot maps help cooperatives act on
+          shared field evidence — not isolated photographs.
+        </p>
+      </div>
+      <figure class="split-media">
+        <div class="phone">
+          <img src="assets/phone-map.webp" alt="Regional hotspot map of Mallorca" width="560" height="1067"
+            loading="lazy" decoding="async" />
+        </div>
+      </figure>
+    </section>
+
+    <section class="split split-soft reveal cv">
+      <figure class="split-media">
+        <div class="phone">
+          <img src="assets/phone-assistant.webp" alt="Voice agronomic assistant in NeuroFarming" width="560"
+            height="955" loading="lazy" decoding="async" />
+        </div>
+      </figure>
+      <div class="split-copy">
+        <p class="label">Decision support</p>
+        <h2>Ask by voice or text.</h2>
+        <p>
+          The multilingual assistant answers in English, Spanish, Catalan, or Greek — practical support for growers, not
+          a substitute for certified plant-health professionals.
+        </p>
+        <p class="meta meta-dark">EN · ES · CA · EL</p>
+      </div>
+    </section>
+
+    <section id="admin" class="admin reveal cv">
+      <div class="admin-intro">
+        <p class="label">Operations console</p>
+        <h2>Admin web app for cooperatives and agronomists.</h2>
+        <p>
+          NeuroFarming includes a browser-based admin dashboard — not just the field app. Operators manage users, review
+          observations, watch outbreak hotspots, track SMART ERA KPIs, and steer continuous model learning from one
+          console.
+        </p>
+        <ul class="admin-offers">
+          <li><strong>Overview</strong> — users, observations, feedback, telemetry, and API health at a glance</li>
+          <li><strong>Observations</strong> — review farmer uploads and diagnosis outcomes</li>
+          <li><strong>Outbreak map</strong> — Mallorca-centred hotspot monitoring for the pilot</li>
+          <li><strong>Users &amp; roles</strong> — activate accounts and promote farmers to agronomist or admin</li>
+          <li><strong>KPIs</strong> — SMART ERA evidence metrics for consortium reporting</li>
+          <li><strong>ML learning</strong> — label review, retraining signals, and continuous improvement</li>
+          <li><strong>System ops</strong> — advisories, inference queue, API logs, and system messages</li>
+        </ul>
+      </div>
+
+      <div class="admin-gallery" aria-label="Admin dashboard screenshots">
+        <div class="admin-gallery-track">
+          <figure class="browser admin-slide">
+            <img src="assets/admin-overview.webp" alt="NeuroFarming admin overview dashboard" width="1132" height="791"
+              loading="lazy" decoding="async" />
+            <figcaption>Overview</figcaption>
+          </figure>
+          <figure class="browser admin-slide">
+            <img src="assets/admin-observations.webp" alt="NeuroFarming admin observations list" width="1132"
+              height="826" loading="lazy" decoding="async" />
+            <figcaption>Observations</figcaption>
+          </figure>
+          <figure class="browser admin-slide">
+            <img src="assets/admin-outbreaks.webp" alt="NeuroFarming admin outbreak hotspot map" width="1132"
+              height="792" loading="lazy" decoding="async" />
+            <figcaption>Outbreak map</figcaption>
+          </figure>
+          <figure class="browser admin-slide">
+            <img src="assets/admin-ml.webp" alt="NeuroFarming continuous AI learning console" width="1132" height="916"
+              loading="lazy" decoding="async" />
+            <figcaption>Continuous AI learning</figcaption>
+          </figure>
+          <figure class="browser admin-slide">
+            <img src="assets/admin-users.webp" alt="NeuroFarming admin users and roles" width="1132" height="787"
+              loading="lazy" decoding="async" />
+            <figcaption>Users &amp; roles</figcaption>
+          </figure>
+          <figure class="browser admin-slide">
+            <img src="assets/admin-kpis.webp" alt="NeuroFarming SMART ERA KPI dashboard" width="1132" height="632"
+              loading="lazy" decoding="async" />
+            <figcaption>SMART ERA KPIs</figcaption>
+          </figure>
+        </div>
+        <p class="admin-gallery-hint">Drag to browse</p>
+      </div>
+
+      <div class="admin-feature reveal">
+        <div class="admin-copy">
+          <p class="label">Command centre</p>
+          <h3>See the pilot from one screen.</h3>
+          <p>The overview surfaces live operational counts so cooperative staff know what needs attention without
+            digging through logs.</p>
+        </div>
+        <figure class="browser admin-desktop-shot">
+          <img src="assets/admin-overview.webp" alt="NeuroFarming admin overview dashboard" width="1132" height="791"
+            loading="lazy" decoding="async" />
+        </figure>
+      </div>
+
+      <div class="admin-feature admin-feature-flip reveal">
+        <div class="admin-copy">
+          <p class="label">Field evidence</p>
+          <h3>Review every observation.</h3>
+          <p>Browse farmer uploads with labels and confidence so agronomists can validate edge cases and keep the
+            learning loop honest.</p>
+        </div>
+        <figure class="browser admin-desktop-shot">
+          <img src="assets/admin-observations.webp" alt="NeuroFarming admin observations list" width="1132" height="826"
+            loading="lazy" decoding="async" />
+        </figure>
+      </div>
+
+      <div class="admin-feature reveal">
+        <div class="admin-copy">
+          <p class="label">Spatial risk</p>
+          <h3>Watch outbreak hotspots.</h3>
+          <p>The outbreak map centres on the Mallorca pilot so cooperatives can spot clusters early and coordinate
+            response.</p>
+        </div>
+        <figure class="browser admin-desktop-shot">
+          <img src="assets/admin-outbreaks.webp" alt="NeuroFarming admin outbreak hotspot map" width="1132" height="792"
+            loading="lazy" decoding="async" />
+        </figure>
+      </div>
+
+      <div class="admin-grid reveal admin-desktop-grid">
+        <figure class="browser">
+          <img src="assets/admin-ml.webp" alt="NeuroFarming continuous AI learning console" width="1132" height="916"
+            loading="lazy" decoding="async" />
+          <figcaption>Continuous AI learning — review signals and retrain when the field demands it.</figcaption>
+        </figure>
+        <figure class="browser">
+          <img src="assets/admin-users.webp" alt="NeuroFarming admin users and roles" width="1132" height="787"
+            loading="lazy" decoding="async" />
+          <figcaption>Users &amp; roles — activate growers and promote agronomists securely.</figcaption>
+        </figure>
+        <figure class="browser">
+          <img src="assets/admin-kpis.webp" alt="NeuroFarming SMART ERA KPI dashboard" width="1132" height="632"
+            loading="lazy" decoding="async" />
+          <figcaption>SMART ERA KPIs — evidence metrics ready for consortium reporting.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="valley" aria-hidden="true">
+      <picture>
+        <source media="(max-width: 760px)" srcset="assets/grove-terrace-sm.webp" type="image/webp" width="720"
+          height="405" />
+        <img src="assets/grove-terrace.webp" alt="" width="1100" height="619" loading="lazy" decoding="async" />
+      </picture>
+      <div class="valley-veil"></div>
+      <p class="valley-caption">Sóller valley · olive &amp; citrus terraces</p>
+    </section>
+
+    <section id="pilot" class="pilot reveal cv">
+      <div class="pilot-layout">
+        <div class="pilot-copy">
+          <p class="label">SMART ERA Open Call</p>
+          <h2>Sóller valley pilot</h2>
+          <p>
+            Field-tested with Mediterranean olive and citrus growers in Mallorca, with an operations console for
+            cooperatives and pseudonymous KPI export for the SMART ERA Data Platform.
+          </p>
+          <ul class="pilot-list">
+            <li>Android field client with on-device and cloud diagnosis</li>
+            <li>Admin console for users, observations, outbreaks, and ML learning</li>
+            <li>Live KPI pull endpoint for consortium evidence reporting</li>
+          </ul>
+        </div>
+        <aside class="pilot-side" aria-label="Pilot focus">
+          <p class="pilot-where">Sóller · Mallorca</p>
+          <p class="pilot-blurb">Olive &amp; citrus groves under real Mediterranean conditions.</p>
+          <dl class="pilot-facts">
+            <div>
+              <dt>Crops</dt>
+              <dd>Olive · Citrus</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Edge + cloud AI</dd>
+            </div>
+            <div>
+              <dt>Loop</dt>
+              <dd>Grower → agronomist → model</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+      <img class="contact-bg" src="assets/contact-grove.webp" alt="" width="1200" height="560" loading="lazy"
+        decoding="async" />
+      <div class="contact-veil" aria-hidden="true"></div>
+      <div class="contact-content">
+        <p class="label label-light">Next step</p>
+        <h2>Bring NeuroFarming to your growers.</h2>
+        <p>
+          Cooperatives, agronomist networks, and pilot partners — talk to Eight Bells about deployment and Mediterranean
+          rollout.
+        </p>
+        <div class="contact-cta">
+          <a class="btn btn-solid"
+            href="mailto:a.ioannidis@8bellsresearch.com?subject=NeuroFarming%20pilot%20enquiry">Email the team</a>
+          <a class="btn btn-line" href="https://www.linkedin.com/company/neurofarming" rel="noopener noreferrer"
+            target="_blank">NeuroFarming on LinkedIn</a>
+          <a class="btn btn-line" href="https://www.linkedin.com/company/eight-bells-ltd" rel="noopener noreferrer"
+            target="_blank">Eight Bells on LinkedIn</a>
+          <a class="btn btn-line" href="https://www.8bellsresearch.com" rel="noopener noreferrer">Visit Eight Bells</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/logo.webp" alt="NeuroFarming" width="140" height="114" loading="lazy" decoding="async" />
+      <p>Developed by Eight Bells Ltd. in the SMART ERA context (Grant Agreement No. 101084160).</p>
+      <div class="footer-credits" aria-label="Project funding and programme logos">
+        <img class="credit-logo credit-logo-smart" src="assets/logo-smart-era.png" alt="SMART ERA" width="220"
+          height="72" loading="lazy" decoding="async" />
+        <img class="credit-logo credit-logo-eu" src="assets/logo-eu-cofunded.png" alt="Co-funded by the European Union"
+          width="280" height="58" loading="lazy" decoding="async" />
+      </div>
+    </div>
+    <div class="footer-meta">
+      <a href="https://www.linkedin.com/company/neurofarming" rel="noopener noreferrer" target="_blank">NeuroFarming on
+        LinkedIn</a>
+      <a href="https://www.linkedin.com/company/eight-bells-ltd" rel="noopener noreferrer" target="_blank">Eight Bells
+        on LinkedIn</a>
+      <a href="https://www.8bellsresearch.com" rel="noopener noreferrer">8bellsresearch.com</a>
+      <span>© <span id="year"></span> Eight Bells Ltd.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
